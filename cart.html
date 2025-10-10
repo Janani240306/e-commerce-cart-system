@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - Dressify</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <div class="logo-circle">D</div>
+      <h1>Dressify</h1>
+    </div>
+    <nav>
+      <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+    </nav>
+  </header>
+
+  <!-- Cart Section -->
+  <main>
+    <section class="cart-section">
+      <h2>Your Shopping Cart</h2>
+      <div id="cart-items"></div>
+      <h3 id="total"></h3>
+      <button id="orderBtn">Order Now</button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Dressify. All Rights Reserved.</p>
+    <div class="social">
+      <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function loadCart() {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let cartContainer = document.getElementById("cart-items");
+      let totalEl = document.getElementById("total");
+
+      cartContainer.innerHTML = "";
+      let total = 0;
+
+      if (cart.length === 0) {
+        cartContainer.innerHTML = "<p>Your cart is empty!</p>";
+        totalEl.innerText = "";
+        return;
+      }
+
+      cart.forEach((item, index) => {
+        let div = document.createElement("div");
+        div.classList.add("cart-item");
+        div.innerHTML = `
+          <span>${item.name}</span>
+          <span>$${item.price.toFixed(2)}</span>
+        `;
+        cartContainer.appendChild(div);
+        total += item.price;
+      });
+
+      totalEl.innerText = "Total: $" + total.toFixed(2);
+    }
+
+    document.getElementById("orderBtn").addEventListener("click", () => {
+      alert("Order placed successfully!");
+      localStorage.removeItem("cart");
+      window.location.href = "home.html"; // redirect to home
+    });
+
+    // Load cart when page opens
+    window.onload = loadCart;
+  </script>
+
+
+</body>
+</html>

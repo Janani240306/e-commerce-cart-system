@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Dressify</title>
+  <link rel="stylesheet" href="contact1.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <div class="logo-circle">D</div>
+      <h1>Dressify</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Body -->
+  <main>
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+      <p>Have questions or feedback? Send us a message and we'll get back to you soon.</p>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info">
+      <div class="info-card">
+        <h3>📍 Address</h3>
+        <p>123 Fashion Street, Chennai, India</p>
+      </div>
+      <div class="info-card">
+        <h3>📞 Phone</h3>
+        <p>+91 98765 43210</p>
+      </div>
+      <div class="info-card">
+        <h3>✉️ Email</h3>
+        <p>support@dressify.com</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Dressify. All Rights Reserved.</p>
+    <div class="social">
+      <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert("Thank you! Your message has been sent.");
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>

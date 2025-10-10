@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men Dresses - Dressify</title>
+  <link rel="stylesheet" href="men.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <div class="logo-circle">D</div>
+      <h1>Dressify</h1>
+    </div>
+    <nav>
+      <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+  </header>
+
+  <!-- Body -->
+  <main>
+    <section class="products">
+      <h2>Men's Collection</h2>
+      <div class="product-grid">
+
+        <!-- 10 Men Products -->
+        <div class="product-card">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.UOyA_cB7E2MpXplAZ0wpUQHaHa?pid=Api&P=0&h=220" alt="Men Dress 1">
+          <h3>Formal Shirt</h3>
+          <p>$39.99</p>
+          <button onclick="addToCart('Formal Shirt',39.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://img.kwcdn.com/product/fancy/6d45182c-1108-4640-9780-1a5ca268a176.jpg?imageView2/2/w/800/q/70/format/webp" alt="Men Dress 2">
+          <h3>Casual T-Shirt</h3>
+          <p>$19.99</p>
+          <button onclick="addToCart('Casual T-Shirt',19.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.xAjU-1rDxtyexdioGrhr2gHaHa?pid=Api&P=0&h=220" alt="Men Dress 3">
+          <h3>Blazer</h3>
+          <p>$89.99</p>
+          <button onclick="addToCart('Blazer',89.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAGZO-MENS-MRISH4246056E1BF97D/1626443017953_10.jpg" alt="Men Dress 4">
+          <h3>Denim Jeans</h3>
+          <p>$49.99</p>
+          <button onclick="addToCart('Denim Jeans',49.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.R5tTGniZ2Z1yGS-kJnzRXwHaJQ?pid=Api&P=0&h=220" alt="Men Dress 5">
+          <h3>Leather Jacket</h3>
+          <p>$119.99</p>
+          <button onclick="addToCart('Leather Jacket',119.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/71YcMBz0guL._AC_SL1500_.jpg" alt="Men Dress 6">
+          <h3>Polo T-Shirt</h3>
+          <p>$24.99</p>
+          <button onclick="addToCart('Polo T-Shirt',24.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/71T0TisfY1L._AC_SL1500_.jpg" alt="Men Dress 7">
+          <h3>Hoodie</h3>
+          <p>$34.99</p>
+          <button onclick="addToCart('Hoodie',34.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/18815900/2023/2/20/e4d88115-2163-4602-b649-9a3e7877a4921676892688833-ADIDAS-Men-Track-Pants-3941676892688195-1.jpg" alt="Men Dress 8">
+          <h3>Track Pants</h3>
+          <p>$29.99</p>
+          <button onclick="addToCart('Track Pants',29.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://cdn.bestsuppliers.com/seo_products_img/nayiji2020/7fa7c177009836c7a9ba1058bafd0c23.jpg!/rotate/180" alt="Men Dress 9">
+          <h3>Suit Set</h3>
+          <p>$149.99</p>
+          <button onclick="addToCart('Suit Set',149.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.pinimg.com/736x/03/03/26/0303262dc206349c581a3f26c1be08fa.jpg" alt="Men Dress 10">
+          <h3>Kurta Set</h3>
+          <p>$59.99</p>
+          <button onclick="addToCart('Kurta Set',59.99)">Add to Cart</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Dressify. All Rights Reserved.</p>
+    <div class="social">
+      <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push({name: name, price: price});
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(name + " added to cart!");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Women Dresses - Dressify</title>
+  <link rel="stylesheet" href="women.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <div class="logo-circle">D</div>
+      <h1>Dressify</h1>
+    </div>
+    <nav>
+     <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- Body -->
+  <main>
+    <section class="products">
+      <h2>Women's Collection</h2>
+      <div class="product-grid">
+
+        <!-- 10 Women Products -->
+        <div class="product-card">
+          <img src="https://cdn.shopify.com/s/files/1/2102/5691/products/61_1024x1024_2d556ad6-8367-469c-a4c2-d00643a1959a_580x@2x.jpg?v=1571610068" alt="Women Dress 1">
+          <h3>Party Gown</h3>
+          <p>$99.99</p>
+          <button onclick="addToCart('Party Gown',99.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.pinimg.com/originals/70/08/fc/7008fc9f886f17d4b6db6465943a5005.jpg" alt="Women Dress 2">
+          <h3>Saree</h3>
+          <p>$49.99</p>
+          <button onclick="addToCart('Saree',49.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.pinimg.com/originals/00/ae/db/00aedb52f43d3b3e73d299a0c6d1dfdc.jpg" alt="Women Dress 3">
+          <h3>Lehenga</h3>
+          <p>$129.99</p>
+          <button onclick="addToCart('Lehenga',129.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://www.websmyle.com/blog/wp-content/uploads/2022/09/Pink-Mulmul-Hand-Block-Print-Anarkali-Set.jpg" alt="Women Dress 4">
+          <h3>Kurti</h3>
+          <p>$29.99</p>
+          <button onclick="addToCart('Kurti',29.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="http://3.bp.blogspot.com/-ciwR0yrBfAY/Tm25IsynWaI/AAAAAAAAAPc/3dYtN9q38vE/s1600/Bridal+Salwar+Kameez+Indian1.jpg" alt="Women Dress 5">
+          <h3>Salwar Suit</h3>
+          <p>$39.99</p>
+          <button onclick="addToCart('Salwar Suit',39.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://thegirlintheyellowdress.com/wp-content/uploads/2016/04/jeans-shirt-3-different-ways-49-2.jpg" alt="Women Dress 6">
+          <h3>Top & Jeans</h3>
+          <p>$59.99</p>
+          <button onclick="addToCart('Top & Jeans',59.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://www.free-mockup.com/wp-content/uploads/edd/2024/01/Crop-Top-Woman-T-Shirt-Mockup-00.jpg" alt="Women Dress 7">
+          <h3>Crop Top</h3>
+          <p>$19.99</p>
+          <button onclick="addToCart('Crop Top',19.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.pinimg.com/originals/3d/20/9b/3d209b05b90c5b7ebfd9d827b43f89dd.jpg" alt="Women Dress 8">
+          <h3>Office Wear</h3>
+          <p>$79.99</p>
+          <button onclick="addToCart('Office Wear',79.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.pinimg.com/736x/68/51/90/685190d0c11248e070852dcda39a3f08.jpg" alt="Women Dress 9">
+          <h3>Western Dress</h3>
+          <p>$69.99</p>
+          <button onclick="addToCart('Western Dress',69.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://www.kollybollyethnics.com/image/catalog/data/04Apr2023/Net-embroidered-long-Anarkali-suit-in-Light-purple-colour-5303.jpg" alt="Women Dress 10">
+          <h3>Anarkali</h3>
+          <p>$89.99</p>
+          <button onclick="addToCart('Anarkali',89.99)">Add to Cart</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Dressify. All Rights Reserved.</p>
+    <div class="social">
+      <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push({name: name, price: price});
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(name + " added to cart!");
+    }
+  </script>
+
+</body>
+</html>
